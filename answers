@@ -1,0 +1,14 @@
+1. What is the difference between hardened and non-hardened keys?
+Hardened keys are safer because they use the parent private key to create new keys.
+You cannot make child keys from only a public key, so they are more secure.
+Non-hardened keys use the parent public key to create child keys.
+You can make new addresses using only the public key, but if someone gets a child private key and the parent public key, they can find the parent private key.
+In short, hardened keys are more secure, while non-hardened keys are more flexible but less safe.
+
+2. Why should a wallet developer prefer deterministic wallets over non-deterministic wallets?
+Deterministic wallets (HD wallets) create all keys from one seed phrase, such as 12 words.
+They are easy to back up because one seed restores everything.
+They are organized and can generate many addresses in order.
+They are also safer because you do not need to store each private key separately.
+Non-deterministic wallets make random keys each time, which makes them harder to back up and easier to lose access to.
+In short, deterministic wallets are easier to back up, organized, and safer, while non-deterministic wallets are harder to manage and riskier.
